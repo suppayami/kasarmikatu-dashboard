@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'route/home.dart';
+import 'router.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(App());
 
-class MyApp extends StatelessWidget {
+class App extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: Home(),
+      initialRoute: "/",
+      routes: appRoutes,
     );
   }
 }

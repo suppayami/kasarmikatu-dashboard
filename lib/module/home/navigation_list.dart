@@ -1,30 +1,7 @@
 import 'package:flutter/material.dart';
+import '../../router.dart';
 
-class Home extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Home"),
-      ),
-      body: Container(
-        constraints: BoxConstraints.expand(),
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/background.png"),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: Container(
-          padding: EdgeInsets.all(16.0),
-          child: _Navigation(),
-        ),
-      ),
-    );
-  }
-}
-
-class _Navigation extends StatelessWidget {
+class NavigationList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -37,7 +14,7 @@ class _Navigation extends StatelessWidget {
               width: double.infinity,
               height: 160.0,
               child: FlatButton(
-                onPressed: () {},
+                onPressed: _navigateEvent(context),
                 child: Text(
                   "Events",
                   style: TextStyle(color: Colors.white),
@@ -61,5 +38,11 @@ class _Navigation extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  VoidCallback _navigateEvent(BuildContext context) {
+    return () {
+      Navigator.pushNamed(context, EVENT_ROUTE);
+    };
   }
 }
