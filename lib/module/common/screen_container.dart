@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import './assets.dart' as assets;
 
 class ScreenContainer extends StatelessWidget {
   final Widget child;
 
-  ScreenContainer({Key key, this.child})
-      : assert(child != null),
+  ScreenContainer({
+    Key key,
+    @required this.child,
+  })  : assert(child != null),
         super(key: key);
 
   @override
@@ -13,7 +16,7 @@ class ScreenContainer extends StatelessWidget {
       constraints: BoxConstraints.expand(),
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/background.png"),
+          image: AssetImage(assets.BACKGROUND_IMAGE),
           fit: BoxFit.cover,
         ),
       ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../router.dart';
+import '../../router.dart' show EVENT_ROUTE;
 
 class NavigationList extends StatelessWidget {
   @override
