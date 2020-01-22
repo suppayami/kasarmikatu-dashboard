@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './navigation_list.dart';
-import '../common/screen_container.dart';
+import 'package:kasarmikatu_dashboard/module/common/screen_container.dart';
+import 'package:kasarmikatu_dashboard/module/home/navigation_list.dart';
 
 class HomeScreen extends StatelessWidget {
   @override

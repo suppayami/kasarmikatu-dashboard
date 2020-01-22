@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
-import './module/common/api.dart' show client;
-import './router.dart' show appRoutes;
+import 'package:kasarmikatu_dashboard/module/common/api.dart';
+import 'package:kasarmikatu_dashboard/router.dart';
 
 void main() => runApp(App());
 

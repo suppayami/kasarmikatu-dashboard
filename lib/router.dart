@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'module/home/home.dart';
-import 'module/event/event.dart';
+import 'package:kasarmikatu_dashboard/module/event/event_screen.dart';
+import 'package:kasarmikatu_dashboard/module/home/home_screen.dart';
 
-const HOME_ROUTE = "/";
-const EVENT_ROUTE = "/event";
+const homeRoute = "/";
+const eventRoute = "/event";
 
 Map<String, WidgetBuilder> appRoutes = {
-  HOME_ROUTE: (context) => HomeScreen(),
-  EVENT_ROUTE: (context) => EventScreen(),
+  homeRoute: (context) => HomeScreen(),
+  eventRoute: (context) => EventScreen(),
 };

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './assets.dart' as assets;
+import 'package:kasarmikatu_dashboard/module/common/assets.dart' as assets;
 
 class ScreenContainer extends StatelessWidget {
   final Widget child;
@@ -16,7 +16,7 @@ class ScreenContainer extends StatelessWidget {
       constraints: BoxConstraints.expand(),
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(assets.BACKGROUND_IMAGE),
+          image: AssetImage(assets.backgroundImage),
           fit: BoxFit.cover,
         ),
       ),

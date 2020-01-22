@@ -1,1 +1,1 @@
-const BACKGROUND_IMAGE = "assets/background.png";
+const backgroundImage = "assets/background.png";

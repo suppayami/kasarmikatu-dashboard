@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../router.dart' show EVENT_ROUTE;
+import 'package:kasarmikatu_dashboard/module/common/const.dart';
+import 'package:kasarmikatu_dashboard/router.dart';
 
 class NavigationList extends StatelessWidget {
   @override
@@ -19,7 +20,7 @@ class NavigationList extends StatelessWidget {
                   "Events",
                   style: TextStyle(color: Colors.white),
                 ),
-                color: Color.fromARGB(32, 32, 32, 32),
+                color: cardBackgroundColor,
               )),
         ),
         Padding(
@@ -33,7 +34,7 @@ class NavigationList extends StatelessWidget {
                   "Etc",
                   style: TextStyle(color: Colors.white),
                 ),
-                color: Color.fromARGB(32, 32, 32, 32),
+                color: cardBackgroundColor,
               )),
         ),
       ],
@@ -42,7 +43,7 @@ class NavigationList extends StatelessWidget {
 
   VoidCallback _navigateEvent(BuildContext context) {
     return () {
-      Navigator.pushNamed(context, EVENT_ROUTE);
+      Navigator.pushNamed(context, eventRoute);
     };
   }
 }
