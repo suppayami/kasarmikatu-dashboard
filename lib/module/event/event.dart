@@ -21,29 +21,43 @@ class Event extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(startTime),
-      subtitle: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          SizedBox.fromSize(
-            size: Size(100, 8),
+    return Card(
+      color: Color.fromARGB(48, 255, 255, 255),
+      elevation: 0,
+      margin: EdgeInsets.all(8.0),
+      child: Padding(
+        padding: EdgeInsets.all(4.0),
+        child: ListTile(
+          title: Text(startTime, style: TextStyle(color: Colors.white)),
+          subtitle: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
+                child: Center(
+                  child: Text(
+                    title,
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
+              ListView.builder(
+                shrinkWrap: true,
+                itemCount: presentations.length,
+                itemBuilder: (context, index) {
+                  final presentation = presentations.elementAt(index);
+                  final speaker = presentation.speaker;
+                  final topic = presentation.topic;
+                  return Text(
+                    "$speaker: $topic",
+                    style: TextStyle(color: Colors.white),
+                  );
+                },
+              ),
+            ],
           ),
-          Center(child: Text(title)),
-          SizedBox.fromSize(
-            size: Size(100, 8),
-          ),
-          ListView.builder(
-            shrinkWrap: true,
-            itemCount: presentations.length,
-            itemBuilder: (context, index) {
-              final presentation = presentations.elementAt(index);
-              final speaker = presentation.speaker;
-              final topic = presentation.topic;
-              return Text("$speaker: $topic");
-            },
-          ),
-        ],
+        ),
       ),
     );
   }

@@ -17,14 +17,15 @@ class EventScreen extends StatelessWidget {
             Text(
               "Events",
               style: TextStyle(
-                  fontSize: 24,
-                  color: Colors.white,
-                  shadows: <Shadow>[
-                    Shadow(
-                      blurRadius: 4.0,
-                      color: Colors.black,
-                    )
-                  ]),
+                fontSize: 24,
+                color: Colors.white,
+                shadows: <Shadow>[
+                  Shadow(
+                    blurRadius: 4.0,
+                    color: Colors.black,
+                  ),
+                ],
+              ),
             ),
             SizedBox(
               height: 8.0,
@@ -32,14 +33,15 @@ class EventScreen extends StatelessWidget {
             Text(
               "Event streaming link will appear before it starts (usually on the same day as the event)",
               style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white,
-                  shadows: <Shadow>[
-                    Shadow(
-                      blurRadius: 4.0,
-                      color: Colors.black,
-                    )
-                  ]),
+                fontSize: 16,
+                color: Colors.white,
+                shadows: <Shadow>[
+                  Shadow(
+                    blurRadius: 4.0,
+                    color: Colors.black,
+                  ),
+                ],
+              ),
             ),
             SizedBox(
               height: 16.0,

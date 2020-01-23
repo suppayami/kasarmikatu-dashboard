@@ -33,16 +33,14 @@ class EventList extends StatelessWidget {
             final event = events[index];
             final startTime = DateFormat("EEEE dd.MM.yyyy HH:mm")
                 .format(DateTime.parse(event["startTime"]));
-            return Card(
-              child: Event(
-                key: Key(event["id"]),
-                startTime: startTime,
-                title: event["title"],
-                presentations: List.castFrom(event["presentations"]).map(
-                    (presentation) => PresentationModel(
-                        speaker: presentation["speaker"]["name"],
-                        topic: presentation["topic"])),
-              ),
+            return Event(
+              key: Key(event["id"]),
+              startTime: startTime,
+              title: event["title"],
+              presentations: List.castFrom(event["presentations"]).map(
+                  (presentation) => PresentationModel(
+                      speaker: presentation["speaker"]["name"],
+                      topic: presentation["topic"])),
             );
           },
         );
